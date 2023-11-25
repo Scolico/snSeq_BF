@@ -32,7 +32,7 @@ monocle2_data <- function(seu,color_by = "Age"){
   #Selection of genes
   disp_table <- dispersionTable(cds)
   unsup_clustering_genes <- subset(disp_table, mean_expression >= 0.1)
-  diff <- differentialGeneTest(cds[unsup_clustering_genes$gene_id,],fullModelFormulaStr="~age",cores=1) #fullModelFormulaStr="~age"根据需求自定义
+  diff <- differentialGeneTest(cds[unsup_clustering_genes$gene_id,],fullModelFormulaStr="~age",cores=1) 
   deg <- subset(diff, qval < 0.01)
   deg <- deg[order(deg$qval,decreasing=F),]
   ordergene <- top_n(deg,n=1000,desc(deg$qval))
