@@ -1,4 +1,4 @@
-
+###R version 4.1.2 and monocle 2.22.0 were used for analysis
 #Load data
 seu <- subset(test.clean,subtype=='GABA.15')
 monocle2_data <- function(seu,color_by = "Age"){
