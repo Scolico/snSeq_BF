@@ -51,11 +51,11 @@ cell_type<-'GABA_Sox6'
 de<-wilcox[wilcox$cell_type=='GABA_Sox6',]
 
 vlcon<-de
-vlcon<-subset(vlcon,avg_logFC!="NA" & abs(avg_logFC)!=Inf) #É¾³ýlog2FoldChangeÖÐµÄ¿ÕÖµ
-vlcon<-subset(vlcon,p_val!="NA" &p_val_adj!=0) #É¾³ýpvalueÖÐµÄ¿ÕÖµ
+vlcon<-subset(vlcon,avg_logFC!="NA" & abs(avg_logFC)!=Inf) #åˆ é™¤log2FoldChangeä¸­çš„ç©ºå€¼
+vlcon<-subset(vlcon,p_val!="NA" &p_val_adj!=0) #åˆ é™¤pvalueä¸­çš„ç©ºå€¼
 #vlcon<-subset(vlcon,entrez!="NA")
 vlcon<-vlcon[order(vlcon$p_val_adj,abs(vlcon$avg_logFC), decreasing = c(T,F)), ]
-#¶Ôlog2foldchange½øÐÐÉÏµ÷ÏÂµ÷µÄÅÐ¶Ï
+#å¯¹log2foldchangeè¿›è¡Œä¸Šè°ƒä¸‹è°ƒçš„åˆ¤æ–­
 threshold <- factor(ifelse(vlcon$p_val_adj < 0.05 &
                              
                              abs(vlcon$avg_logFC) >= 0.1 ,
