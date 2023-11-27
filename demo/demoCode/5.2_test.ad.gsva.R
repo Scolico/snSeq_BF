@@ -48,7 +48,7 @@ targetSets<-targetSets[1:100]
 matrix<-data@assays$RNA@counts
 matrix<-NormalizeData(matrix,normalization.method='RC',scale.factor=1e6)
 matrix<-Matrix(log2(matrix+1),sparse=T)
-gsva.score<-gsva(matrix,targetSets,min.sz=5,kcdf='Gaussian') ###用counts kcdf='Poisson',else'Gaussian'
+gsva.score<-gsva(matrix,targetSets,min.sz=5,kcdf='Gaussian') ###脫脙counts kcdf='Poisson',else'Gaussian'
 
 meta<-data@meta.data
 meta<-meta[,c("orig.ident","group")]
@@ -81,7 +81,7 @@ cell.n<-data.frame(table(meta.1$phetp))
 cell.n$name<-paste0(cell.n$Var1,'/',cell.n$Var2)
 names(cell)<-cell.n$name
 spc.gsva<-gsva.score[rownames(gsva.score) %in% DEgs,]
-tt <- sapply(cell,function(b) rowMeans(gsva.score.1[,b])) ###按分组信息求平均值
+tt <- sapply(cell,function(b) rowMeans(gsva.score.1[,b])) ###掳麓路脰脳茅脨脜脧垄脟贸脝陆戮霉脰碌
 
 tt<-data.frame(tt)
 tt$diff<-tt$AD-tt$Norm
