@@ -1,5 +1,5 @@
 # snSeq_BF
-This repository supplies the codes used in the article "Developmental Features of Basal Forebrain Revealed by Single-nucleus RNA sequencing".
+This repository supplies the codes used in the article "A comprehensive single-nucleus transcriptomic atlas of the basal forebrain across the lifespan reveals diverse aging-related pathways".
 
 # Overview
 
