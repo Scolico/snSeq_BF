@@ -1,5 +1,7 @@
 # snSeq_BF
-This repository supplies the codes used in the article "A comprehensive single-nucleus transcriptomic atlas of the basal forebrain across the lifespan reveals diverse aging-related pathways".
+This repository supplies the codes used in the article "Single-nucleus transcriptome atlas of the basal forebrain reveals diverse ageing-related pathways".
+
+If you use this data in your article, please cite:<https://doi.org/10.1093/brain/awaf060>
 
 # Overview
 
